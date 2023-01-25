@@ -29,7 +29,7 @@ const Translate = () => {
                 <TranslationForm onTranslate={handleTranslateClicked}/>
             </section>
             <section id="test">
-                <TranslationImage name="A" image="img/individial_signs/a.png" />
+                <TranslationImage name="A" image="img/individual_signs/a.png" />
             </section>
         </>
     )
