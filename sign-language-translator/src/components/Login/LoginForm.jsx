@@ -4,7 +4,7 @@ import { loginUser } from '../../api/user'
 import { storageSave } from '../../utils/storage'
 import { useNavigate } from 'react-router-dom'
 import { useUser } from '../../context/UserContex'
-import { STORAGE_KEY_USER } from '../../const/storageKeys'
+import { STORAGE_KEY_USER } from '../../const/storageKey'
 
 const usernameConfig = {
     required: true,

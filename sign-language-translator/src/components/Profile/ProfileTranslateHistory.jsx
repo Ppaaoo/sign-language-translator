@@ -1,4 +1,4 @@
-import ProfileTranslateHistoryItem from "./ProfileOrderHistoryItem"
+import ProfileTranslateHistoryItem from "./ProfileTranslateHistoryItem"
 
 const ProfileTranslateHistory = ({ translations }) => {
     const translationList = translations.map(

@@ -1,10 +1,10 @@
 import { addTranslation } from "../api/translation"
 import TranslationForm from "../components/Translation/TranslationForm"
-import { STORAGE_KEY_USER } from "../const/storageKeys"
-import { useUser } from "../context/UserContex"
 import withAuth from "../hoc/withAuth"
 import { storageSave } from "../utils/storage"
 import TranslationImage from "../components/Translation/TranslationImage"
+import { useUser } from "../context/UserContext"
+import { STORAGE_KEY_USER } from "../const/storageKey"
 
 const Translate = () => {
     const {user, setUser} = useUser()

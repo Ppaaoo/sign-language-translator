@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import { STORAGE_KEY_USER } from "../const/storageKeys";
+import { STORAGE_KEY_USER } from "../const/storageKey";
 import { storageRead } from "../utils/storage";
 
 //Context object - exposing states

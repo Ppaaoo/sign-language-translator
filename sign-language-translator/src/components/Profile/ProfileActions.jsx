@@ -1,5 +1,5 @@
 import { clearTranslationHistory } from "../../api/translation"
-import { STORAGE_KEY_USER } from "../../const/storageKeys"
+import { STORAGE_KEY_USER } from "../../const/storageKey"
 import { useUser } from "../../context/UserContex"
 import { storageDelete, storageSave} from "../../utils/storage"
 
