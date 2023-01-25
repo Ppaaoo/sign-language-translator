@@ -1,6 +1,6 @@
 import { clearTranslationHistory } from "../../api/translation"
 import { STORAGE_KEY_USER } from "../../const/storageKey"
-import { useUser } from "../../context/UserContex"
+import { useUser } from "../../context/UserContext"
 import { storageDelete, storageSave} from "../../utils/storage"
 
 const ProfileActions = () => {
