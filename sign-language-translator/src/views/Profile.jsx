@@ -24,12 +24,14 @@ const Profile = () => {
     }, [setUser, user.id])
 
     return (
-        <>
-            <h1>Profile</h1>
-            <ProfileHeader username={user.username} />
-            <ProfileActions />
-            <ProfileTranslateHistory translations={user.translations} />
-        </>
+        <div class="text-center bg-gray-50 text-gray-800 pt-8 px-6">
+            <div>
+                <h1 class="text-5xl font-bold mt-0 mb-6">Profile</h1>
+                <ProfileHeader username={user.username} />
+                <ProfileActions />
+                <ProfileTranslateHistory translations={user.translations} />
+            </div>
+        </div>
     )
 }
 
