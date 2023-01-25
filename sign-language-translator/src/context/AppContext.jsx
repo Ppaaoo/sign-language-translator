@@ -1,4 +1,4 @@
-import UserProvider from "./UserContex"
+import UserProvider from "./UserContext"
 
 const AppContext = ({children}) => {
 
