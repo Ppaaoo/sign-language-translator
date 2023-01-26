@@ -1,8 +1,8 @@
 const TranslationImage = ({name, image}) => {
     return (
-        <aside>
+        <div>
             <img src={image} alt={name} width="55"/>
-        </aside>
+        </div>
     )
 }
 

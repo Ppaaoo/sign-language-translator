@@ -2,9 +2,9 @@ import { addTranslation } from "../api/translation"
 import TranslationForm from "../components/Translation/TranslationForm"
 import withAuth from "../hoc/withAuth"
 import { storageSave } from "../utils/storage"
-import TranslationImage from "../components/Translation/TranslationImage"
 import { useUser } from "../context/UserContext"
 import { STORAGE_KEY_USER } from "../const/storageKey"
+import TranslationImage from "../components/Translation/TranslationImage"
 
 const Translate = () => {
     const {user, setUser} = useUser()
@@ -23,15 +23,15 @@ const Translate = () => {
     }
 
     return (
-        <>
-            <h1>Translate</h1>
+        <div class="text-center bg-gray-50 text-gray-800 pt-8 px-6 h-screen">
+            <h1 class="text-5xl font-bold mt-0 mb-6">Translate</h1>
             <section id="translation">
                 <TranslationForm onTranslate={handleTranslateClicked}/>
             </section>
-            <section id="test">
-                <TranslationImage name="A" image="img/individual_signs/a.png" />
-            </section>
-        </>
+            <div>
+                <TranslationImage image={`img/individual_signs/a.png`} name="a" />
+            </div>
+        </div>
     )
 }
 export default withAuth(Translate)

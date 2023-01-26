@@ -24,7 +24,7 @@ const Profile = () => {
     }, [setUser, user.id])
 
     return (
-        <div class="text-center bg-gray-50 text-gray-800 pt-8 px-6">
+        <div class="text-center bg-gray-50 text-gray-800 pt-8 px-6 h-screen">
             <div>
                 <h1 class="text-5xl font-bold mt-0 mb-6">Profile</h1>
                 <ProfileHeader username={user.username} />
