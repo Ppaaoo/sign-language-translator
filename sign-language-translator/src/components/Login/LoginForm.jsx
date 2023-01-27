@@ -26,7 +26,7 @@ const LoginForm = () => {
         if(user !== null) {
             navigate('profile')
         }
-    }, [user, navigate]) //Empty dependencies - Run ONCE
+    }, [user, navigate])
 
     //Event handlers
     const onSubmit = async ({username}) => {

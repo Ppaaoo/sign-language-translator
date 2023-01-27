@@ -16,27 +16,25 @@ const Translate = () => {
             value: translation.split('')
         }])
 
-        console.log("Translate button clicked! " + translation)
-        console.log(translationArray)
+        console.log(`Not empty? ${translationArray}`)
         const [error, updatedUser] = await addTranslation(user, translation)
 
         if(error === null) {
             storageSave(STORAGE_KEY_USER, updatedUser)
             setUser(updatedUser)
         }
-         
          console.log('Error', error)
          console.log('Result', updatedUser)
     }
 
     return (
-        <div class="text-center bg-gray-50 text-gray-800 pt-8 px-6 h-screen">
-            <h1 class="text-5xl font-bold mt-0 mb-6">Translate</h1>
-            <section id="translation">
+        <div className="text-center bg-gray-50 text-gray-800 pt-8 px-6 h-screen">
+            <h1 className="text-5xl font-bold mt-0 mb-6">Translate</h1>
+            <div id="translation">
                 <TranslationForm onTranslate={handleTranslateClicked}/>
-            </section>
+            </div>
             <div>
-                { (translationArray[0]?.value !== undefined) ? translationArray[0].value.map((currentChar, index) => <img key={index} src={`img/individual_signs/${currentChar}.png`} alt={currentChar}/>) : ""}
+                {(translationArray[0]?.value !== undefined) ? translationArray[0].value.map((currentChar, index) => <img key={index} src={`img/individual_signs/${currentChar}.png`} alt={currentChar}/>) : ""}
             </div>
         </div>
     )
