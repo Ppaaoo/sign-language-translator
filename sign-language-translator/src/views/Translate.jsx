@@ -36,7 +36,7 @@ const Translate = () => {
                 <TranslationForm onTranslate={handleTranslateClicked}/>
             </section>
             <div>
-                {translationArray.map((currentChar, index) => <img key={index} src={`img/individual_signs/${Array.from(currentChar.value)[index]}.png`} alt={Array.from(currentChar.value)[index]}/>)}
+                { (translationArray[0]?.value !== undefined) ? translationArray[0].value.map((currentChar, index) => <img key={index} src={`img/individual_signs/${currentChar}.png`} alt={currentChar}/>) : ""}
             </div>
         </div>
     )
