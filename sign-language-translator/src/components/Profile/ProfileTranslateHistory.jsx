@@ -10,6 +10,7 @@ const ProfileTranslateHistory = ({ translations }) => {
                 <h3 class="text-lg font-bold mt-8">Your translation history:</h3>
                 <div>
                     {translationList.length === 0 && <p>Your translation history is empty</p>}
+                    {translationList.length <= 10 && translationList.splice(0,1)}
                     {translationList}
                 </div>
             </div>

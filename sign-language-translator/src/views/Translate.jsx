@@ -4,13 +4,20 @@ import withAuth from "../hoc/withAuth"
 import { storageSave } from "../utils/storage"
 import { useUser } from "../context/UserContext"
 import { STORAGE_KEY_USER } from "../const/storageKey"
-import TranslationImage from "../components/Translation/TranslationImage"
+import { useState } from "react"
 
 const Translate = () => {
     const {user, setUser} = useUser()
+    const [translationArray, setTranslationArray] = useState([])
 
     const handleTranslateClicked = async (translation) => {
+        setTranslationArray([...translationArray, {
+            id: translationArray.length,
+            value: translation.split('')
+        }])
+
         console.log("Translate button clicked! " + translation)
+        console.log(translationArray)
         const [error, updatedUser] = await addTranslation(user, translation)
 
         if(error === null) {
@@ -29,7 +36,7 @@ const Translate = () => {
                 <TranslationForm onTranslate={handleTranslateClicked}/>
             </section>
             <div>
-                <TranslationImage image={`img/individual_signs/a.png`} name="a" />
+                {translationArray.map((currentChar, index) => <img key={index} src={`img/individual_signs/${Array.from(currentChar.value)[index]}.png`} alt={Array.from(currentChar.value)[index]}/>)}
             </div>
         </div>
     )
